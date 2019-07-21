@@ -7,8 +7,12 @@ export class Grid extends HTMLElement {
 	}
 
 	connectedCallback() { 
-		 this.classList.add("container");
-		 this.setAttribute("style", "display: block;"); 
+		if(this.hasAttribute("fluid")) {
+			this.classList.add("container-fluid");
+		} else {
+			this.classList.add("container");
+		}
+		this.setAttribute("style", "display: block;"); 
 	}
 
 }

@@ -12,7 +12,7 @@ export class Switch extends HTMLElement {
 
 	attributeChangedCallback() { 
 		this.render(); 
-		this.querySelector("input").checked = this.getAttribute("checked") === "true";
+		this.querySelector("input").checked = this.hasAttribute("checked");
 	}
 
 	connectedCallback() { 
